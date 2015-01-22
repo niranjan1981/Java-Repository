@@ -1,0 +1,10 @@
+package NiranjanJoshi.NiranjanClass;
+
+public class YahooMailMainClass {
+	
+	public static void main(String[] args){
+		
+		
+	}
+
+}

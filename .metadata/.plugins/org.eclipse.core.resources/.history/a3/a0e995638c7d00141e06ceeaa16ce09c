@@ -1,0 +1,14 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.testng.*;
+
+public class FireFoxTestOneTest {
+
+	public static void main(String[] args) {
+		
+		@Test
+		Assert.assertEquals(FirefoxTestOne.getTitle(),"Wikipedia");
+
+	}
+
+}

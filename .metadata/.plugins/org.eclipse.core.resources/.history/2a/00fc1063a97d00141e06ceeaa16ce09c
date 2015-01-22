@@ -1,0 +1,12 @@
+package NiranjanJoshi.NiranjanClass;
+
+
+public class GmailMainClass {
+
+	public static void main(String[] args) {
+
+		GmailLogin newLogin = new GmailLogin();
+		newLogin.doLogin("nvkrjoshi", "wormblack81");
+	}
+
+}

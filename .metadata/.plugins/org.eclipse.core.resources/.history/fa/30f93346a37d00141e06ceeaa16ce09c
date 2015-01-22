@@ -1,0 +1,10 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+public class GmailLogin {
+
+	@FindBy(xapth="//*[@id='Email']")
+	public WebElement username;
+	
+}

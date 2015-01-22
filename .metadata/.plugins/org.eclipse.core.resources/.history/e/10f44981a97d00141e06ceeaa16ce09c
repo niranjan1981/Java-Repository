@@ -1,0 +1,17 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.support.pagefactory.*;
+
+public class GmailMainClass {
+
+	public static void main(String[] args) {
+
+		WebDriver firefox = new FirefoxDriver();
+		
+		GmailLogin newLogin = new GmailLogin();
+		newLogin.doLogin("nvkrjoshi", "wormblack81");
+	}
+
+}

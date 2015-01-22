@@ -1,0 +1,23 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.*;
+
+public class GmailMainClass {
+
+	public static void main(String[] args) {
+
+		WebDriver firefox = new FirefoxDriver();
+		firefox.get("https://www.gmail.com");
+		
+		GmailLogin newLogin = PageFactory.initElements(firefox, GmailLogin.class);
+		newLogin.doLogin("nvkrjoshi.test", "nvkrjoshi");
+		
+		firefox.getTitle();
+		GmailInboxPage InboxPage = PageFactory.initElements(firefox, GmailInboxPage.class);
+		InboxPage.getInboxPageName();
+	}
+
+}

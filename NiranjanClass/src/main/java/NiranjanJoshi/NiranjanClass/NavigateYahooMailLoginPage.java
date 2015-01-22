@@ -1,0 +1,81 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.*;
+
+
+public class NavigateYahooMailLoginPage {
+
+	WebDriver driver ;
+	
+	public NavigateYahooMailLoginPage(WebDriver driver){
+		
+		this.driver = driver;
+	}
+	
+	@FindBy(xpath="//*[@id='username']")
+	public WebElement username;
+	
+	@FindBy(xpath="//*[@id='passwd']")
+	public WebElement password;
+	
+	@FindBy(xpath="//*[@id='.save']")
+	public WebElement signOnButton;
+	
+	//String niranjanButton = "//*[@id='yui_3_10_3_1_1375219693637_127']";
+	//String signOutButton = "//*[@id='yucs-signout']";
+	
+	@FindBy(xpath="//*[@id='yui_3_10_3_1_1375219693637_127']")
+	public WebElement NiranjanButton;
+	
+	@FindBy(xpath="//*[@id='yucs-signout']")
+	public WebElement SignOutButton;
+	
+	//@FindBy(title="Compose")
+	//public WebElement SendEmailButton;
+	
+	//WebElement NiranjanButton = driver.findElement(By.xpath(niranjanButton));
+	//WebElement SignOutButton = driver.findElement(By.xpath(signOutButton));
+	
+	
+	public  NavigateYahooMailLoginPage doLogin(String myUsername, String myPassword){
+		
+		username.sendKeys(myUsername);
+		password.sendKeys(myPassword);
+		signOnButton.click();
+		return null;
+	}
+	
+	public void signOut(){
+		
+		WebElement Niranjan = driver.findElement(By.id("Hi, Niranjan"));
+	    Actions action = new Actions(driver);
+	    action.moveToElement(Niranjan).build().perform();
+		//action.moveToElement(SignOutButton).perform();
+		//SignOutButton.click();
+		
+	} 
+	
+	public void sendMail() throws InterruptedException{
+		
+		WebElement compose = driver.findElement(By.id("Compose"));
+		compose.click();
+		Thread.sleep(3000);
+		WebElement to = driver.findElement(By.id("to-field"));
+		to.sendKeys("nvkrjoshi_test@yahoo.com");
+		WebElement subject = driver.findElement(By.id("subject-field"));
+		subject.sendKeys("Test");
+		WebElement messageBody = driver.findElement(By.id("rtetext"));
+		messageBody.sendKeys("This is a test email");
+		WebElement sendButton = driver.findElement(By.xpath("//*[@id='yui_3_16_0_1_1418004271259_3757']"));
+		sendButton.click();
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,23 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+public class GmailLogin {
+
+	@FindBy(xpath="//*[@id='Email']")
+	public WebElement username;
+	
+	@FindBy(xpath="//*[@id='Passwd']")
+	public WebElement password;
+	
+	@FindBy(xpath="//*[@id='signIn']")
+	public WebElement signInButton;
+	
+	public void doLogin(String myUsername, String myPassword){
+		
+		username.sendKeys("nvkrjoshi");
+		password.sendKeys("wormblack81");
+		signInButton.click();
+	}
+	
+}

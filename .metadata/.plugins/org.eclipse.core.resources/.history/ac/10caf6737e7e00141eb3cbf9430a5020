@@ -1,0 +1,18 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.*;
+public class YahooMailMainClass {
+	
+	public static void main(String[] args){
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.get("https://mail.yahoo.com");
+		
+		NavigateYahooMailLoginPage login = PageFactory.initElements(driver, NavigateYahooMailLoginPage.class);
+		login.doLogin("nvkrjoshi","W0rmh0le" );
+	}
+
+}

@@ -1,0 +1,13 @@
+package NiranjanJoshi.NiranjanClass;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class FirefoxTestOne {
+
+	public static void main(String[] args) {
+		
+		FirefoxDriver firefox = new FirefoxDriver();
+		firefox.get("https://www.wikipedia.com");
+
+	}
+
+}
